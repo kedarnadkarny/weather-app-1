@@ -9,24 +9,34 @@ import { WeatherService } from '../services/weather.service';
 export class DashboardComponent implements OnInit {
 
   private weather = {};
-  private city: string = 'Dallas';
-  private country: string = '';
-
-
+  private forecast = {};
+  private city: string = '';
+  private errors = [];
+  private isError = false;
 
   constructor(private _weatherService: WeatherService) { }
 
   ngOnInit() {
-    this.getWeatherByCityName();
+
   }
 
   getWeatherByCityName() {
+    if (this.city === '') {
+      this.isError = true;
+      this.errors.push({ 'message': 'Please enter city!' });
+      return;
+    } else {
+      this.isError = false;
+      this.errors = [];
+    }
     this._weatherService.getWeatherByCityName(this.city)
       .subscribe(weather => this.weather = weather);
+    this.getForecast();
   }
 
-  displayWeather() {
-    console.log(this.weather);
+  getForecast() {
+    this._weatherService.getForecast(this.city)
+      .subscribe(forecast => this.forecast = forecast['list']);
   }
 
 }

@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { WeatherService } from './services/weather.service';
 import { SimpleWeatherComponent } from './simple-weather/simple-weather.component';
+import { DayItemComponent } from './day-item/day-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    SimpleWeatherComponent
+    SimpleWeatherComponent,
+    DayItemComponent
   ],
   imports: [
     BrowserModule,

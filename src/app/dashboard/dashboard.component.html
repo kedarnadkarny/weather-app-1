@@ -8,20 +8,15 @@
               <div class="row">
                 <div class="col-12 col-lg-12">
                   <input type="text" class="input1" placeholder="City" [(ngModel)]="city" name="city">
-                </div>
-                <div class="col-12 col-lg-12">
-                  <input type="text" class="input1" placeholder="Country" [(ngModel)]="country" name="country">
+                  <span *ngIf="isError">{{ errors[0].message }}</span>
                 </div>
                 <div class=" col-12 col-lg-12">
                   <button class="btn btn-block button1" (click)="getWeatherByCityName()">Get Weather</button>
-                  <button class="btn btn-block button1" (click)="displayWeather()">Get Display</button>
-                  <br>
-                  <br> {{city}} {{country}}
                 </div>
               </div>
             </div>
-            <div class="col-lg-9">
-              <app-simple-weather [childWeather]="weather"></app-simple-weather>
+            <div class="col-lg-9 rightpane">
+              <app-simple-weather [childWeather]="weather" [childForecast]="forecast"></app-simple-weather>
             </div>
           </div>
         </div>

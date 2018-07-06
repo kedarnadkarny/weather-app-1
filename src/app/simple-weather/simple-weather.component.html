@@ -1,52 +1,59 @@
+<app-day-item [items]="forecast"></app-day-item>
+
+
 <div *ngIf="isWeather;else other_content">
   <div class="row">
-    <div class="col-lg-4">
-      <h5>City
-        <i class="fas fa-map-marker-alt"></i>
-      </h5>
-      <br>
-      <h3>{{weather.name}}</h3>
-    </div>
-    <div class="col-lg-4">
-      <h5>Temperature
-        <i class="fas fa-thermometer-half"></i>
-      </h5>
-      <br>
-      <h3>{{ (9/5)*(weather.main.temp-273)+32 | number: '.1' }} F</h3>
+    <div class="col-6 col-lg-4">
+      <div class="card bg-white">
+        <span class="tile-title">City
+          <i class="fas fa-map-marker-alt"></i>
+        </span>
+        <span class="tile-content">{{weather.name}}</span>
+      </div>
 
     </div>
-    <div class="col-lg-4">
-      <h5>Cloud
-        <i class="fas fa-cloud"></i>
-      </h5>
-      <br>
-      <h3>{{weather.clouds.all}} %</h3>
+    <div class="col-6 col-lg-4">
+      <div class="card bg-white">
+        <span class="tile-title">Temperature
+          <i class="fas fa-thermometer-half"></i>
+        </span>
+        <span class="tile-content">{{ (9/5)*(weather.main.temp-273)+32 | number: '.1' }} &#8457;</span>
+      </div>
     </div>
-  </div>
+    <div class="col-6 col-lg-4">
+      <div class="card bg-white">
+        <span class="tile-title">Cloud
+          <i class="fas fa-cloud"></i>
+        </span>
+        <span class="tile-content">{{weather.clouds.all}} %</span>
+      </div>
+    </div>
 
-  <div class="row" style="margin-top: 50px;">
-    <div class="col-lg-4">
-      <h5>Wind
-        <i class="fas fa-location-arrow"></i>
-      </h5>
-      <br>
-      <h3>{{weather.wind.speed}} m/s{{' '}} {{weather.wind.deg}} deg</h3>
+    <div class="col-6 col-lg-4">
+      <div class="card bg-white">
+        <span class="tile-title">Wind
+          <i class="fas fa-location-arrow"></i>
+        </span>
+        <span class="tile-content">{{weather.wind.speed}}m/s{{' '}} {{weather.wind.deg}}&#176;</span>
+      </div>
     </div>
-    <div class="col-lg-4">
-      <h5>Wind
-        <i class="fas fa-location-arrow"></i>
-      </h5>
-      <br>
-      <h3>
-        <img src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png" alt="">
-      </h3>
+    <div class="col-6 col-lg-4">
+      <div class="card bg-white">
+        <span class="tile-title">Wind
+          <i class="fas fa-location-arrow"></i>
+        </span>
+        <span class="tile-content">
+          <img src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png" alt="">
+        </span>
+      </div>
     </div>
-    <div class="col-lg-4">
-      <h5>Wind
-        <i class="fas fa-location-arrow"></i>
-      </h5>
-      <br>
-      <h3>{{weather.wind.speed}} m/s{{' '}} {{weather.wind.deg}} deg</h3>
+    <div class="col-6 col-lg-4">
+      <div class="card bg-white">
+        <span class="tile-title">Wind
+          <i class="fas fa-location-arrow"></i>
+        </span>
+        <span class="tile-content">{{weather.wind.speed}} m/s{{' '}} {{weather.wind.deg}} &#176;</span>
+      </div>
     </div>
   </div>
 

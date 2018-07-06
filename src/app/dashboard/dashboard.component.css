@@ -9,7 +9,7 @@
   background-color: #273648;
   border-radius: 0;
   height: 80vh;
-  padding: 20px;
+  padding-right: 10px;
 }
 
 .input1 {
@@ -28,6 +28,10 @@
   border: none;
   margin: 10px;;
   border-radius: 0;
+}
+
+.rightpane {
+  margin-left: 10px;
 }
 
 @media (max-width: 576px) {

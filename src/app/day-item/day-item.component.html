@@ -1,0 +1,8 @@
+<div class="scrollmenu">
+  <div class="card" *ngFor="let item of forecast; index as i;">
+    {{ item.day }} {{ item.time }}
+    <br>
+    <img src="http://openweathermap.org/img/w/{{item.icon}}.png" alt="">
+    <br> {{ item.max_temp | number: '.1' }} &#8457; {{ item.min_temp | number: '.1'}} &#8457;
+  </div>
+</div>
