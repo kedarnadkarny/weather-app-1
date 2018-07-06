@@ -8,11 +8,11 @@ import { WeatherService } from '../services/weather.service';
 })
 export class DashboardComponent implements OnInit {
 
-  private weather = {};
-  private forecast = {};
-  private city: string = '';
-  private errors = [];
-  private isError = false;
+  public weather = {};
+  public forecast = {};
+  public city: string = '';
+  public errors = [];
+  public isError = false;
 
   constructor(private _weatherService: WeatherService) { }
 
