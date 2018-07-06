@@ -7,8 +7,8 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 })
 export class DayItemComponent implements OnInit, OnChanges {
   @Input("items") private items = [];
-  private forecast = [];
-  private weekday = new Array(7);
+  public forecast = [];
+  public weekday = new Array(7);
 
 
   constructor() {
