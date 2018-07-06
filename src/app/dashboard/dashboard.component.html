@@ -1,0 +1,32 @@
+<div class="container-fluid background">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card card1">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="row">
+                <div class="col-12 col-lg-12">
+                  <input type="text" class="input1" placeholder="City" [(ngModel)]="city" name="city">
+                </div>
+                <div class="col-12 col-lg-12">
+                  <input type="text" class="input1" placeholder="Country" [(ngModel)]="country" name="country">
+                </div>
+                <div class=" col-12 col-lg-12">
+                  <button class="btn btn-block button1" (click)="getWeatherByCityName()">Get Weather</button>
+                  <button class="btn btn-block button1" (click)="displayWeather()">Get Display</button>
+                  <br>
+                  <br> {{city}} {{country}}
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <app-simple-weather [childWeather]="weather"></app-simple-weather>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

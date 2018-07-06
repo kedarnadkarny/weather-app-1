@@ -1,0 +1,38 @@
+.background {
+  background: rgb(226,112,32);
+  background: linear-gradient(90deg, rgba(226,112,32,1) 0%, rgba(226,112,32,1) 18%, rgba(228,69,52,1) 100%);
+  height: 100vh;
+}
+
+.card1 {
+  margin: 100px;
+  background-color: #273648;
+  border-radius: 0;
+  height: 80vh;
+  padding: 20px;
+}
+
+.input1 {
+  color: #fff;
+ border: none;
+ background-color: #273648;
+ border-bottom: 1px solid #F15447;
+ margin: 10px;
+ width: 100%;
+ outline: none;
+}
+
+.button1 {
+  background-color: #F15447;
+  color: #fff;
+  border: none;
+  margin: 10px;;
+  border-radius: 0;
+}
+
+@media (max-width: 576px) {
+  .card1 {
+    margin: 20px 10px !important;
+    height: 95vh;
+  }
+}
