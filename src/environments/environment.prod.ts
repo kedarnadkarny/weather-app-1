@@ -1,5 +1,4 @@
-const key = require('./environment.dev');
 export const environment = {
   production: true,
-  api_key: key.api_key
+  api_key: process.env.API_KEY
 };

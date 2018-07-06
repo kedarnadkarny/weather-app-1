@@ -1,7 +1,7 @@
 <app-day-item [items]="forecast"></app-day-item>
 
 
-<div *ngIf="isWeather;else other_content">
+<div *ngIf="isWeather">
   <div class="row">
     <div class="col-6 col-lg-4">
       <div class="card bg-white">
@@ -58,5 +58,3 @@
   </div>
 
 </div>
-
-<ng-template #other_content>other content here...</ng-template>
